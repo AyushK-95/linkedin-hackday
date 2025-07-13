@@ -85,7 +85,7 @@ setTimeout(() => {
     console.log('Late initialization attempt...');
     initializeHighlights(); // Re-initialize to handle late attempts
   }
-}, 10000);
+}, 10000); 
 
 // Show preferences modal on first load if not set
 import { getPreferredDomains } from './components/utils';

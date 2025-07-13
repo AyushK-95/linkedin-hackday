@@ -1,16 +1,18 @@
 /* Trends Modal Styles */
 .linkedin-trends-modal {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  flex: 1 1 auto;
+  overflow: auto;
   background: #fff;
-  border-radius: 18px 18px 0 0;
-  box-shadow: 0 -4px 32px rgba(0,0,0,0.18);
-  z-index: 2147483647;
-  max-height: 80vh;
-  overflow-y: auto;
-  animation: slideUp 0.3s ease-out;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.32);
+  z-index: 100;
+}
+
+@media (max-width: 700px) {
+  .linkedin-trends-modal {
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 
 @keyframes slideUp {
@@ -27,34 +29,19 @@
   position: relative;
 }
 
-.trends-modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: #888;
-  cursor: pointer;
-  z-index: 2;
-  line-height: 1;
-  padding: 0 4px;
-  border-radius: 50%;
-  transition: background 0.15s;
-}
-
-.trends-modal-close:hover {
-  background: #f0f4f8;
-  color: #0077b5;
-}
-
 .trends-modal-hashtag-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
   padding: 0 24px 16px 24px;
   border-bottom: 1px solid #eee;
   margin-bottom: 16px;
+}
+
+.trends-modal-hash-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .trends-modal-hash {
@@ -67,6 +54,60 @@
   font-size: 1.2rem;
   color: #666;
   font-weight: 500;
+}
+
+.trends-modal-action-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trends-modal-action-btn {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.6rem;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.trends-modal-action-btn svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  stroke: #222;
+  fill: none;
+}
+
+.trends-modal-action-btn.create svg {
+  stroke: #222;
+  fill: #fff;
+}
+
+.trends-modal-action-btn.like svg {
+  stroke: #222;
+}
+
+.trends-modal-action-btn.share svg {
+  stroke: #222;
+}
+
+.trends-modal-action-btn:hover {
+  background: #ece8e2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.trends-modal-action-btn:active {
+  background: #e0dbd3;
 }
 
 .trends-modal-list {
@@ -155,6 +196,12 @@
 .story-slide.shrink-highlight {
   transform: scale(0.95);
   transition: transform 0.3s ease;
+}
+
+.story-slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* Report sheet styles */
