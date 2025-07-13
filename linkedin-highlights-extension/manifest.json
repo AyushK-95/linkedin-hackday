@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Highlights",
+  "version": "1.0.0",
+  "description": "AI-powered professional insight feed for LinkedIn",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.linkedin.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LinkedIn Highlights",
+    "default_icon": {
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["injected.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "32": "icons/icon32.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["https://*.linkedin.com/*"]
+    }
+  ]
+} 

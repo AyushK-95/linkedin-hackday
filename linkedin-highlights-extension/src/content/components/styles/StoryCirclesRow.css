@@ -1,0 +1,129 @@
+/* Story Circles Row Styles */
+.linkedin-highlights-circles-row {
+  width: 100% !important;
+  background: #fff !important;
+  padding: 12px 0 8px 0 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  margin: 0 !important; /* Remove all margins to ensure no space */
+  overflow-x: auto !important;
+}
+
+.circles-scroll {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 18px !important;
+  overflow-x: auto !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.story-circle-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+  user-select: none !important;
+}
+
+.story-circle-avatar {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #fff !important;
+  box-sizing: border-box !important;
+  margin-bottom: 6px !important;
+  transition: border 0.2s, box-shadow 0.2s !important;
+}
+
+.story-circle-avatar img {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.story-circle-item:hover .story-circle-avatar {
+  border: 2px solid #6366f1 !important;
+  box-shadow: 0 4px 16px rgba(99,102,241,0.12) !important;
+}
+
+.story-circle-label {
+  font-size: 0.85rem !important;
+  color: #555 !important;
+  text-align: center !important;
+  margin-top: 2px !important;
+  white-space: nowrap !important;
+}
+
+.story-circle-avatar.unseen {
+  border: 3px solid #0077ff !important;
+  box-shadow: 0 0 0 2px #e0e7ef;
+}
+
+.story-circle-avatar.seen {
+  border: 3px solid #e0e0e0 !important;
+  box-shadow: 0 0 0 2px #f5f5f5;
+}
+
+/* Responsive: Circles Row */
+@media (max-width: 600px) {
+  .linkedin-highlights-circles-row {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background: #fff !important;
+    padding: 12px 0 8px 0 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    overflow-x: auto !important;
+    z-index: 1002 !important;
+  }
+  
+  .circles-scroll {
+    gap: 10px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  .story-circle-item {
+    min-width: 44px !important;
+    max-width: 44px !important;
+  }
+  
+  .story-circle-avatar {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .story-circle-avatar img {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  
+  .story-circle-label {
+    font-size: 0.7rem !important;
+    max-width: 44px !important;
+  }
+  
+  .story-circle-avatar.unseen {
+    border: 3px solid #0077ff !important;
+    box-shadow: 0 0 0 2px #e0e7ef;
+  }
+  
+  .story-circle-avatar.seen {
+    border: 3px solid #e0e0e0 !important;
+    box-shadow: 0 0 0 2px #f5f5f5;
+  }
+} 
